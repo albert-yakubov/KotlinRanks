@@ -30,5 +30,5 @@ fun main(args: Array<String>) {
 
         val result2 = catAndMouse(1, 2, 3)
         println(result2)
-    
+
 }
