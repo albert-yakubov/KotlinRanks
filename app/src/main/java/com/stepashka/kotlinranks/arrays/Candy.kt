@@ -14,7 +14,8 @@ fun candy(n: Int, arr: MutableList<Int>) : Long{
         // if first child has better score then he gets more candy
         for (child in 0 until arr.size) {
             if (arr[child] >= arr[child]) {
-                newArray[child + candy]
+                total = child + candy
+                newArray.add(total)
 
             }
         }
@@ -32,5 +33,5 @@ fun sumArray(array: IntArray): Int{
 }
 var myArray = intArrayOf(1, 2, 1, 2, 3, 1)
 fun main(args: Array<String>) {
-    println(candy(6, myArray.toMutableList()))
+    println(candy(1, myArray.toMutableList()))
 }
