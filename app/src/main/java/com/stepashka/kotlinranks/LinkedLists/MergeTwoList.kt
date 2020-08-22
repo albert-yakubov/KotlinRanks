@@ -2,7 +2,7 @@ package com.stepashka.kotlinranks.LinkedLists
 
 
 /* Link list node */
-internal class Node(var data: Int) {
+class Node(var data: Int) {
     var next: Node? = null
 
 }
