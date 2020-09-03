@@ -26,7 +26,7 @@ package com.stepashka.kotlinranks.arrays
 // My understanding:
 // Query is the sequence
 
-fun dynamicArray(n: Int, queries: Array<Array<Int>>): Array<Int> {
+fun dynamicArray(n: Int, queries: Array<Array<Int>>):Unit {
     var seqList = Array(n){ it-> mutableListOf<Int>()}
     var lastAnswer = 0
     var answerList = mutableListOf<Int>()
@@ -37,4 +37,5 @@ fun dynamicArray(n: Int, queries: Array<Array<Int>>): Array<Int> {
 
         }
     }
+    return
 }
