@@ -1,5 +1,7 @@
 package com.stepashka.kotlinranks.TreeLesson
 
+import java.util.*
+
 /**
  * Example:
  * var ti = TreeNode(5)
@@ -10,20 +12,20 @@ class TreeNode(var `val`: Int) {
     var right: TreeNode? = null
 }
 
-
-fun preorderTraversal(root: TreeNode?): List<Int> {
-    var k: Int
-    if (root !== null) {
-            pre.get(k++) = { root -> `val` }
-            preorder { root -> l }
-            preorder { root -> r }
+fun preorderTraversal(root: TreeNode?): ArrayList<Int> {
+    val returnList = ArrayList<Int>()
+    if (root == null) return returnList
+    val stack = Stack<TreeNode?>()
+    stack.push(root)
+    while (!stack.empty()) {
+        val n = stack.pop()
+        returnList.add(n!!.`val`)
+        if (n.right != null) {
+            stack.push(n.right)
+        }
+        if (n.left != null) {
+            stack.push(n.left)
         }
     }
-}
-void preorder(node *root){
-    if(root!=NULL){
-        pre[k++]=root->val;
-        preorder(root->l);
-        preorder(root->r);
-    }
+    return returnList
 }
