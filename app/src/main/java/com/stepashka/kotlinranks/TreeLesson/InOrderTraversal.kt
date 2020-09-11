@@ -12,15 +12,20 @@ fun inorderTraversal(root: TreeNode?): List<Int> {
 
     while(currentNode != null || stack.size > 0){
         //this is how to reach the most left node:
-        while (currentNode != null){
+        while (currentNode != null) {
             stack.push(currentNode)
+            answerList.add(currentNode.`val`)
             //reset:
-            currentNode = currentNode.left
-            answerList.add(currentNode!!.left!!.`val`)
-        }
-        currentNode = stack.pop()
-        currentNode = currentNode!!.right
+            if (currentNode.left != null) {
+                currentNode = currentNode.left
 
+
+            }
+            if (currentNode?.right != null) {
+                currentNode = stack.pop()
+                currentNode = currentNode!!.right
+            }
+        }
     }
     return answerList.toList()
 }
