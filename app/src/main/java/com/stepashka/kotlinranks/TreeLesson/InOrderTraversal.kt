@@ -48,3 +48,15 @@ fun inorderTraversal(root: TreeNode?): List<Int> {
 //    }
 //    return returnList
 //}
+fun calculateSeconds(years: Double): Float {
+
+    val day = 1
+    var hours = day *24
+    var ageInHours = 356 * 24
+    var minutes = ageInHours * 60
+    var seconds = minutes * 60
+    return minutes.toFloat()
+}
+fun main(args: Array<String>){
+    println(calculateSeconds(33.0))
+}
