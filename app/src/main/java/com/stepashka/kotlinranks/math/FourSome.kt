@@ -8,19 +8,22 @@ fun fourSum(nums: IntArray, target: Int): List<List<Int>> {
     nums.forEachIndexed { index, num ->
             var muteList = mutableListOf<Int>()
             var num1 = nums[index]
+            println(num1)
             var num2 = nums[1]
+            println(num2)
             var num3 = nums[2]
+        println(num3)
             var num4 = nums.size - 1
-           // while (index > nums.size - 1) {
+        println(num4)
+        // while (index > nums.size - 1) {
 
-                if (nums[num1] + nums[num2] + nums[num3] + nums[num4] == target && index == nums.size -1) {
+                if (num1 + num2 + num3 + num4 == target) {
                     muteList.add(num1)
                     muteList.add(num2)
                     muteList.add(num3)
                     muteList.add(num4)
                     answers.add(muteList.toList())
-                } else {
-                    num4--
+                     
                 }
             }
 
