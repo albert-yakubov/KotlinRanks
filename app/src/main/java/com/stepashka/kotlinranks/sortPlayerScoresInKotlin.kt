@@ -1,6 +1,7 @@
 package com.stepashka.kotlinranks
 
 import java.util.*
+import kotlin.math.min
 
 class SortPlayerScores
 class Player(var name: String, var score: Int)
@@ -10,7 +11,7 @@ class Checker : Comparator<Player?> {
         if (a!!.score < b!!.score) return 1
         if (a.score > b.score) return -1
         if (a.score == b.score) {
-            val min = Math.min(a.name.length, b.name.length)
+            val min = min(a.name.length, b.name.length)
             var i: Int = 0
             while (i < min && a.name[i] == b.name[i]) {
                 i++
