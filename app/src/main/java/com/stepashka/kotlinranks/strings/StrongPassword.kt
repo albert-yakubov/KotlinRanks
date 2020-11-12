@@ -15,7 +15,7 @@ fun minimumNumber(n: Int, password: String): Int {
         return violations.coerceAtLeast(6 - password.length)
 }
 
-val password = "Acura35RL!"
+val password = "Password33!!"
 fun main(args: Array<String>){
     println(minimumNumber(6, password))
 }
