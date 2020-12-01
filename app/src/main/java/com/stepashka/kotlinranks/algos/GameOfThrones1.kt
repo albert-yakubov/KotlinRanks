@@ -10,28 +10,21 @@ each letter on left must have a pair on right
 
 
 **/
-fun gameOfThronesTesting(s: String): String? {
-    val a = "abcdefghijklmnopqrstuvwxyz"
-    var oc = 0
-    var ec = 0
-    val l = s.length
-    for (i in 0..25) {
-        var c = 0
-        for (j in 0 until l) {
-            if (a[i] == s[j]) c++
+fun gameOfThrones(s: String): String? {
+    val alphabet = "abcdefghijklmnopqrstuvwxyz"
+    var first = 0
+    var second = 0
+    val stringLength = s.length
+    for (numberBetweenZeroAndTwentyFife in 0..25) {
+        var charIndex = 0
+        for (numberBetweenZeroAndStringLenght in 0 until stringLength) {
+            if (alphabet[numberBetweenZeroAndTwentyFife] == s[numberBetweenZeroAndStringLenght]) charIndex++
         }
-        if (c % 2 == 0) ec++ else oc++
+        if (charIndex % 2 == 0) first++ else second++
     }
-    return if (oc <= 1) "YES" else if (oc == 2 && l % 2 == 0) "YES" else "NO"
+    return if (first <= 1) "YES" else if (first == 2 && stringLength % 2 == 0) "YES" else "NO"
 }
-fun gameOfThrones(s: String): String {
-    var add = 0
 
-    for (char in s.count { })
-    println("")
-    return ""
-
-}
 fun main(args: Array<String>){
     gameOfThrones("abcba")
 }
